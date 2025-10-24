@@ -1,16 +1,16 @@
-# How-to-populate-TreeNavigator-from-DataBase
-This example demonstrates how to populate a **Syncfusion TreeNavigator** control in a **Windows Forms application** using data retrieved from a database. The TreeNavigator is ideal for displaying hierarchical data in a structured format.
+# How to populate TreeNavigator from a database (WinForms)
+## Overview 
+This example shows how to populate the Syncfusion TreeNavigator control in a Windows Forms application using data retrieved from a database. The TreeNavigator displays hierarchical data with root items for each column and child items for row values.
 
 ## 1. Initialize the Form and DataView
 ```csharp
+private DataView dataBaseView;
+
 public Form1()
 {
     InitializeComponent();
-    dataBaseView = GetOrderDetials();
+    dataBaseView = GetOrderDetails();
 }
-
-// Initialize the DataView
-private DataView dataBaseView;
 ```
 The constructor initializes the form and retrieves data from the database using the `GetOrderDetials()` method, storing it in a `DataView`.
 
@@ -37,7 +37,7 @@ private void FillItems(TreeNavigator tree)
 
 ## 3. Retrieve Data from Database
 ```csharp
-private static DataView GetOrderDetials()
+private static DataView GetOrderDetails()
 {
     try
     {
